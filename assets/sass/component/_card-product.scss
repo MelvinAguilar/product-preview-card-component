@@ -1,0 +1,88 @@
+.card-product {
+    background: $theme-background-color;
+    box-shadow: $theme-box-shadow;
+    color: $theme-neutral-color;
+    
+    margin: 1.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 37.5rem;
+    transition: all 0.3s ease-in-out;
+
+    @include flex(row, center, flex-start);
+    flex-wrap: wrap;
+
+    .card-image {
+        @include flex(column, center, center);
+        flex: 1 0 200px;
+        flex-grow: 1;
+
+        picture {
+            display: flex;
+        }
+
+        img {
+            background-color: blue;
+            @include img-fluid;
+        }
+    }
+
+    .card-info {
+        padding: 2rem;
+        flex: 1 0 200px;
+        flex-grow: 1;
+
+        .card-title {
+            @include font-style(2.1rem, 700, 2rem);
+            font-family: $theme-alt-font;
+            margin: 1.2rem 0;
+        }
+
+        .card-subtitle {
+            @include font-style(0.8rem, 400);
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: $theme-neutral-grayish-color;
+        }
+
+        .card-description {
+            @include font-style(0.9rem, 400, 1.5rem);
+            color: $theme-neutral-grayish-color;
+        }
+
+        .card-product-price {
+            margin: 1.6rem 0;
+            
+            @include font-style(2rem, 700);
+            
+            font-family: $theme-alt-font;
+            @include flex(row, flex-start);
+            gap: 1.7rem;
+            color: $theme-primary-color;
+        
+            span {
+                @include font-style(0.9rem, 400);
+                color: $theme-neutral-grayish-color;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: $theme-box-shadow-hover;
+    }
+}
+
+@include query($screen-rwd, max-width) {
+    .card-product {
+        flex-direction: column;
+    
+        align-items: center;
+        max-width: 100%;
+
+        .card-image,  .card-info {
+            flex: 1 0 100%;
+            width: 100%;
+        }
+    }
+}

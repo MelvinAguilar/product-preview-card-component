@@ -1,0 +1,16 @@
+button.btn {
+    width: 100%;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+
+    background-color: $theme-primary-color;
+   
+    font-weight: 700;
+    color: $theme-background-color;
+
+    &:hover {
+        background-color: $theme-primary-color-alt;
+    }
+}

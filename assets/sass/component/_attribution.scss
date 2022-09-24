@@ -1,0 +1,18 @@
+.attribution {
+    margin-bottom: 1.5rem;
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: $theme-primary-color;
+
+        &:hover {
+            color: $theme-neutral-grayish-color;
+        }
+    }
+
+    @include query($screen-rwd) {
+        position: absolute;
+        bottom: 0;
+    }
+}
