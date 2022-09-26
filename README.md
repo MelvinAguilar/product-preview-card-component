@@ -1,12 +1,25 @@
-# Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+<div align="center">
+<h1>Frontend Mentor - Product preview card component solution</h1>
+</div>
+
+![](./design/screenshot.png)
+
+<br>
+
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+
+<h2 align="center">Links</h2>
+
+- Solution URL: [Product Preview Card (SASS + Flexbox) | Frontend Mentor](https://www.frontendmentor.io/solutions/product-preview-card-sass-css-flexbox-z56A4ly7aN)
+- Live Site URL: [https://product-preview-card-component-sol.vercel.app/](https://product-preview-card-component-sol.vercel.app/)
+
+<br>
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
 - [Author](#author)
@@ -20,10 +33,6 @@ Users should be able to:
 
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
-
-### Screenshot
-
-![](./design/screenshot.png)
 
 ## My process
 
