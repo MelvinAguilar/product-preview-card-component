@@ -14,26 +14,26 @@
 
     .card-image {
         @include flex(column, center, center);
-        flex: 1 0 200px;
+        flex: 1 0 12.5rem;
         flex-grow: 1;
 
-        picture {
+        .card-picture {
             display: flex;
-        }
-
-        img {
-            background-color: blue;
-            @include img-fluid;
+            
+            > img {
+                @include img-fluid;
+            }
         }
     }
 
     .card-info {
         padding: 2rem;
-        flex: 1 0 200px;
+        flex: 1 0 12.5rem;
         flex-grow: 1;
 
         .card-title {
-            @include font-style(2.1rem, 700, 2rem);
+            @include font-style(2.1rem, 700);
+            line-height: 0.95;
             font-family: $theme-alt-font;
             margin: 1.2rem 0;
         }
@@ -41,17 +41,18 @@
         .card-subtitle {
             @include font-style(0.8rem, 400);
             text-transform: uppercase;
-            letter-spacing: 0.2rem;
+            letter-spacing: 0.35em;
             color: $theme-neutral-grayish-color;
         }
 
         .card-description {
-            @include font-style(0.9rem, 400, 1.5rem);
+            @include font-style(0.9rem, 400);
+            line-height: 1.7;
             color: $theme-neutral-grayish-color;
         }
 
         .card-product-price {
-            margin: 1.6rem 0;
+            margin: 1.4rem 0;
             
             @include font-style(2rem, 700);
             
@@ -60,10 +61,9 @@
             gap: 1.7rem;
             color: $theme-primary-color;
         
-            span {
+            .card-product-old-price {
                 @include font-style(0.9rem, 400);
                 color: $theme-neutral-grayish-color;
-                text-decoration: line-through;
             }
         }
     }
@@ -80,7 +80,7 @@
         align-items: center;
         max-width: 100%;
 
-        .card-image,  .card-info {
+        .card-image, .card-info {
             flex: 1 0 100%;
             width: 100%;
         }
