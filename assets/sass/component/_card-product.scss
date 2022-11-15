@@ -9,80 +9,58 @@
     max-width: 37.5rem;
     transition: all 0.3s ease-in-out;
 
-    @include flex(row, center, flex-start);
-    flex-wrap: wrap;
-
-    .card-image {
-        @include flex(column, center, center);
-        flex: 1 0 12.5rem;
-        flex-grow: 1;
-
-        .card-picture {
-            display: flex;
-            
-            > img {
-                @include img-fluid;
-            }
-        }
-    }
-
-    .card-info {
+    &__info {
         padding: 2rem;
-        flex: 1 0 12.5rem;
-        flex-grow: 1;
+    }
 
-        .card-title {
-            @include font-style(2.1rem, 700);
-            line-height: 0.95;
-            font-family: $theme-alt-font;
-            margin: 1.2rem 0;
-        }
+    &__picture img {
+        display: block;
+        @include img-fluid;
+    }
 
-        .card-subtitle {
-            @include font-style(0.8rem, 400);
-            text-transform: uppercase;
-            letter-spacing: 0.35em;
-            color: $theme-neutral-grayish-color;
-        }
+    &__title {
+        @include font-style(2.1rem, 700);
+        line-height: 0.95;
+        font-family: $theme-alt-font;
+        margin-block: 1.2rem;
+    }
 
-        .card-description {
-            @include font-style(0.9rem, 400);
-            line-height: 1.7;
-            color: $theme-neutral-grayish-color;
-        }
+    &__subtitle {
+        @include font-style(0.8rem, 400);
+        color: $theme-neutral-grayish-color;
+        text-transform: uppercase;
+        letter-spacing: 0.35em;
+    }
 
-        .card-product-price {
-            margin: 1.4rem 0;
-            
-            @include font-style(2rem, 700);
-            
-            font-family: $theme-alt-font;
-            @include flex(row, flex-start);
-            gap: 1.7rem;
-            color: $theme-primary-color;
+    &__description {
+        @include font-style(0.9rem, 400);
+        color: $theme-neutral-grayish-color;
+        line-height: 1.7;
+    }
+
+    &__price {
+        @include font-style(2rem, 700);
+        margin-block: 1.4rem;
         
-            .card-product-old-price {
-                @include font-style(0.9rem, 400);
-                color: $theme-neutral-grayish-color;
-            }
+        font-family: $theme-alt-font;
+        @include flex(row, flex-start);
+        gap: 1.7rem;
+        color: $theme-primary-color;
+    }
+
+    &__old-price {
+        @include font-style(0.9rem, 400);
+        color: $theme-neutral-grayish-color;
+    }
+
+    @include media-hover-effect {
+        &:hover {
+            box-shadow: $theme-box-shadow-hover;
         }
     }
 
-    &:hover {
-        box-shadow: $theme-box-shadow-hover;
-    }
-}
-
-@include query($screen-rwd, max-width) {
-    .card-product {
-        flex-direction: column;
-    
-        align-items: center;
-        max-width: 100%;
-
-        .card-image, .card-info {
-            flex: 1 0 100%;
-            width: 100%;
-        }
+    @include query($screen-rwd) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -1,18 +1,21 @@
 .attribution {
-    margin-bottom: 1.5rem;
-    font-size: 0.688rem;
+    margin-block: 0.5rem;
+    font-size: 0.735rem;
     text-align: center;
 
     a {
         color: $theme-primary-color;
-
-        &:hover {
-            color: $theme-neutral-grayish-color;
-        }
     }
 
-    @include query($screen-rwd) {
-        position: absolute;
-        bottom: 0;
+    @include media-double-breakpoint-up($screen-sm, min-width, 36.25em, min-height) {
+        position: fixed;
+        bottom: 0.325rem;
+        width: 100%;
+    }
+
+    @include media-hover-effect() {
+        & a:hover  {
+            color: darken($theme-primary-color, 0.1);
+        }
     }
 }
